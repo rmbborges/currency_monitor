@@ -98,7 +98,13 @@ class LoadCurrentCurrencyData(BaseOperator):
                 replace=False
             )
             logging.info(tuple(element.values()))
+
             cursor.execute(insert_statement, tuple(element.values()))
+
+            pg_conn.commit()
+
+        cursor.close()
+        pg_conn.close()
 
 class LoadClosingReferenceData(BaseOperator):
 
@@ -173,3 +179,8 @@ class LoadClosingReferenceData(BaseOperator):
             )
 
             cursor.execute(insert_statement, tuple(element.values()))
+
+        pg_conn.commit()
+
+        cursor.close()
+        pg_conn.close()
