@@ -1,10 +1,8 @@
-from __future__ import division, absolute_import, print_function
+from operators.loaders import LoadCurrentCurrencyData, LoadClosingReferenceData
 
-from airflow.plugins_manager import AirflowPlugin
 
-import operators
-
-class AuxPlugins(AirflowPlugin):
-    name = "aux_plugins"
-    operators = [
-    ]
+__all__ = [
+    "LoadCurrentCurrencyData",
+    "LoadClosingReferenceData"
+]
+ 

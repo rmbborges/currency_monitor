@@ -10,13 +10,17 @@ class SqlQueries:
             name VARCHAR(100),
             high NUMERIC(10, 8),
             low NUMERIC(10, 8),
-            varBid NUMERIC(10, 8),
-            pctChange NUMERIC(10, 8),
-            bid NUMERIC(10, 8),
-            ask NUMERIC(10, 8),
+            varBid NUMERIC(10, 6),
+            pctChange NUMERIC(10, 6),
+            bid NUMERIC(10, 6),
+            ask NUMERIC(10, 6),
             timestamp TIMESTAMP(1),
-            created_date VARCHAR(10)
+            created_date VARCHAR(20)
         );
+    """
+
+    DROP_DATA_TABLE = """
+        DROP TABLE currency.data;
     """
 
     CREATE_CLOSING_REFERENCE_TABLE = """
@@ -25,5 +29,9 @@ class SqlQueries:
             value NUMERIC(10, 8),
             timestamp TIMESTAMP(1)
         );
+    """
+
+    DROP_CLOSING_REFERENCE_TABLE = """
+        DROP TABLE currency.closing_reference;
     """
     

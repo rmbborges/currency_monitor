@@ -5,7 +5,7 @@ from airflow.models import Variable
 import datetime
 
 from helpers.queries import SqlQueries
-from operators.loaders import LoadCurrentCurrencyData
+from operators.loaders import LoadClosingReferenceData
 
 currencies_list = Variable.get("currencies")
 
@@ -19,11 +19,11 @@ default_args = {
 }
 
 dag = DAG(
-    "main_dag",
+    "reference_data_dag",
     default_args=default_args,
-    description="Consulta os valores agora e decide se precisa fazer um tweet ou não.",
+    description="Consulta os dados históricos das moedas",
     max_active_runs=1,
-    schedule_interval="*/5 9-16 * * 1-5"
+    schedule_interval="0 9 * * 1-5"
 )
 
 start = DummyOperator(dag=dag, task_id="start")
@@ -36,20 +36,20 @@ create_currency_schema = PostgresOperator(
     postgres_conn_id="production_postgres"
 )
 
-create_data_table = PostgresOperator(
+create_closing_reference_table = PostgresOperator(
     dag=dag,
-    task_id="create_data_table",
-    sql=SqlQueries.CREATE_DATA_TABLE,
+    task_id="create_closing_reference_table",
+    sql=SqlQueries.CREATE_CLOSING_REFERENCE_TABLE,
     autocommit=True,
     postgres_conn_id="production_postgres"
 )
 
-load_current_data = LoadCurrentCurrencyData(
+load_closing_reference_data = LoadClosingReferenceData(
     dag=dag,
-    task_id="load_current_data",
+    task_id="load_closing_reference_data",
     postgres_conn_id="production_postgres"
 )
 
 end = DummyOperator(dag=dag, task_id="end")
 
-start >> create_currency_schema >> create_data_table >> load_current_data >> end
+start >> create_currency_schema >> create_closing_reference_table >> load_closing_reference_data >> end
