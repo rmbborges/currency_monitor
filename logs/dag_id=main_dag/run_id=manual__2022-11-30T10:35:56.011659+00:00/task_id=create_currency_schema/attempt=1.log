@@ -1,0 +1,29 @@
+[2022-11-30 10:35:58,010] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: main_dag.create_currency_schema manual__2022-11-30T10:35:56.011659+00:00 [queued]>
+[2022-11-30 10:35:58,017] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: main_dag.create_currency_schema manual__2022-11-30T10:35:56.011659+00:00 [queued]>
+[2022-11-30 10:35:58,017] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-30 10:35:58,017] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-11-30 10:35:58,017] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-30 10:35:58,027] {taskinstance.py:1397} INFO - Executing <Task(PostgresOperator): create_currency_schema> on 2022-11-30 10:35:56.011659+00:00
+[2022-11-30 10:35:58,030] {standard_task_runner.py:52} INFO - Started process 183 to run task
+[2022-11-30 10:35:58,032] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'main_dag', 'create_currency_schema', 'manual__2022-11-30T10:35:56.011659+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpn2lgnycf', '--error-file', '/tmp/tmpfn4rsb08']
+[2022-11-30 10:35:58,033] {standard_task_runner.py:80} INFO - Job 62: Subtask create_currency_schema
+[2022-11-30 10:35:58,074] {task_command.py:371} INFO - Running <TaskInstance: main_dag.create_currency_schema manual__2022-11-30T10:35:56.011659+00:00 [running]> on host eeb3e2d91350
+[2022-11-30 10:35:58,130] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ricardo
+AIRFLOW_CTX_DAG_ID=main_dag
+AIRFLOW_CTX_TASK_ID=create_currency_schema
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-30T10:35:56.011659+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-30T10:35:56.011659+00:00
+[2022-11-30 10:35:58,131] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-11-30 10:35:58,131] {base.py:68} INFO - Using connection ID 'production_postgres' for task execution.
+[2022-11-30 10:35:58,138] {dbapi.py:231} INFO - Running statement: 
+        CREATE SCHEMA IF NOT EXISTS currency;
+    , parameters: None
+[2022-11-30 10:35:58,138] {postgres.py:94} INFO - NOTICE:  schema "currency" already exists, skipping
+
+[2022-11-30 10:35:58,147] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=main_dag, task_id=create_currency_schema, execution_date=20221130T103556, start_date=20221130T103558, end_date=20221130T103558
+[2022-11-30 10:35:58,163] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-30 10:35:58,192] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

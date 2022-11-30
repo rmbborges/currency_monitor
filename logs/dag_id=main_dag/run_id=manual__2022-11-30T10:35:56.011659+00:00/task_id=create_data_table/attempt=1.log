@@ -1,0 +1,39 @@
+[2022-11-30 10:35:58,851] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: main_dag.create_data_table manual__2022-11-30T10:35:56.011659+00:00 [queued]>
+[2022-11-30 10:35:58,861] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: main_dag.create_data_table manual__2022-11-30T10:35:56.011659+00:00 [queued]>
+[2022-11-30 10:35:58,861] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-30 10:35:58,861] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2022-11-30 10:35:58,861] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-30 10:35:58,874] {taskinstance.py:1397} INFO - Executing <Task(PostgresOperator): create_data_table> on 2022-11-30 10:35:56.011659+00:00
+[2022-11-30 10:35:58,886] {standard_task_runner.py:52} INFO - Started process 185 to run task
+[2022-11-30 10:35:58,888] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'main_dag', 'create_data_table', 'manual__2022-11-30T10:35:56.011659+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmps0h2g_u0', '--error-file', '/tmp/tmphh6dolgd']
+[2022-11-30 10:35:58,889] {standard_task_runner.py:80} INFO - Job 63: Subtask create_data_table
+[2022-11-30 10:35:58,937] {task_command.py:371} INFO - Running <TaskInstance: main_dag.create_data_table manual__2022-11-30T10:35:56.011659+00:00 [running]> on host eeb3e2d91350
+[2022-11-30 10:35:58,991] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ricardo
+AIRFLOW_CTX_DAG_ID=main_dag
+AIRFLOW_CTX_TASK_ID=create_data_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-30T10:35:56.011659+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-30T10:35:56.011659+00:00
+[2022-11-30 10:35:58,993] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-11-30 10:35:58,993] {base.py:68} INFO - Using connection ID 'production_postgres' for task execution.
+[2022-11-30 10:35:58,995] {dbapi.py:231} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS currency.data(
+            code VARCHAR(10),
+            codein VARCHAR(10),
+            name VARCHAR(100),
+            high NUMERIC(10, 8),
+            low NUMERIC(10, 8),
+            varBid NUMERIC(10, 8),
+            pctChange NUMERIC(10, 8),
+            bid NUMERIC(10, 8),
+            ask NUMERIC(10, 8),
+            timestamp TIMESTAMP(1),
+            created_date VARCHAR(10)
+        );
+    , parameters: None
+[2022-11-30 10:35:59,016] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=main_dag, task_id=create_data_table, execution_date=20221130T103556, start_date=20221130T103558, end_date=20221130T103559
+[2022-11-30 10:35:59,059] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-30 10:35:59,087] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,68 @@
+[2022-11-29 17:26:29,045] {processor.py:153} INFO - Started process (PID=773) to work on /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:26:29,045] {processor.py:641} INFO - Processing file /opt/airflow/dags/currency_value_dag.py for tasks to queue
+[2022-11-29 17:26:29,046] {logging_mixin.py:115} INFO - [2022-11-29 17:26:29,046] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:26:29,047] {logging_mixin.py:115} INFO - [2022-11-29 17:26:29,046] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/currency_value_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/currency_value_dag.py", line 42
+    t1 = PythonOperator(
+    ^
+IndentationError: unexpected indent
+[2022-11-29 17:26:29,047] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:26:29,068] {processor.py:161} INFO - Processing /opt/airflow/dags/currency_value_dag.py took 0.025 seconds
+[2022-11-29 17:26:59,157] {processor.py:153} INFO - Started process (PID=802) to work on /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:26:59,157] {processor.py:641} INFO - Processing file /opt/airflow/dags/currency_value_dag.py for tasks to queue
+[2022-11-29 17:26:59,157] {logging_mixin.py:115} INFO - [2022-11-29 17:26:59,157] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:26:59,159] {logging_mixin.py:115} INFO - [2022-11-29 17:26:59,158] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/currency_value_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/currency_value_dag.py", line 42
+    t1 = PythonOperator(
+    ^
+IndentationError: unexpected indent
+[2022-11-29 17:26:59,159] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:26:59,174] {processor.py:161} INFO - Processing /opt/airflow/dags/currency_value_dag.py took 0.019 seconds
+[2022-11-29 17:27:29,260] {processor.py:153} INFO - Started process (PID=821) to work on /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:27:29,266] {processor.py:641} INFO - Processing file /opt/airflow/dags/currency_value_dag.py for tasks to queue
+[2022-11-29 17:27:29,267] {logging_mixin.py:115} INFO - [2022-11-29 17:27:29,267] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:27:29,273] {logging_mixin.py:115} INFO - [2022-11-29 17:27:29,271] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/currency_value_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/currency_value_dag.py", line 42
+    t1 = PythonOperator(
+    ^
+IndentationError: unexpected indent
+[2022-11-29 17:27:29,273] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:27:29,302] {processor.py:161} INFO - Processing /opt/airflow/dags/currency_value_dag.py took 0.050 seconds
+[2022-11-29 17:27:43,360] {processor.py:153} INFO - Started process (PID=841) to work on /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:27:43,365] {processor.py:641} INFO - Processing file /opt/airflow/dags/currency_value_dag.py for tasks to queue
+[2022-11-29 17:27:43,366] {logging_mixin.py:115} INFO - [2022-11-29 17:27:43,366] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:27:43,368] {logging_mixin.py:115} INFO - [2022-11-29 17:27:43,367] {dagbag.py:321} ERROR - Failed to import: /opt/airflow/dags/currency_value_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/currency_value_dag.py", line 42
+    t1 = PythonOperator(
+    ^
+IndentationError: unexpected indent
+[2022-11-29 17:27:43,368] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/currency_value_dag.py
+[2022-11-29 17:27:43,383] {processor.py:161} INFO - Processing /opt/airflow/dags/currency_value_dag.py took 0.026 seconds
